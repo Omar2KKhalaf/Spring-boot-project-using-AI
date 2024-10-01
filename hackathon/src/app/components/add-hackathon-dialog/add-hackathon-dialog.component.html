@@ -1,0 +1,79 @@
+<h2 mat-dialog-title>{{ 'ADD_A_HACKATHON' | translate }}</h2>
+<div mat-dialog-content>
+  <div class="add_hackathon">
+    <h1>{{ 'ADD_A_HACKATHON' | translate }}</h1>
+    <form [formGroup]="hackathonForm" >
+      <!-- Name Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'NAME' | translate }}</mat-label>
+        <input matInput placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" formControlName="name" required>
+      </mat-form-field>
+
+      <!-- Start Date Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'START_DATE' | translate }}</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="{{ 'START_DATE_PLACEHOLDER' | translate }}" formControlName="startDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- End Date Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'END_DATE' | translate }}</mat-label>
+        <input matInput [matDatepicker]="picker2" placeholder="{{ 'END_DATE_PLACEHOLDER' | translate }}" formControlName="endDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+
+      <!-- End Date Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'EVENT_DATE' | translate }}</mat-label>
+        <input matInput [matDatepicker]="picker3" placeholder="{{ 'EVENT_DATE_PLACEHOLDER' | translate }}" formControlName="eventDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Max Teams Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'MAX_TEAMS' | translate }}</mat-label>
+        <input matInput type="number" placeholder="{{ 'MAX_TEAMS_PLACEHOLDER' | translate }}" formControlName="maxTeams" required>
+      </mat-form-field>
+
+      <!-- Max Team Size Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'MAX_TEAMS_SIZE' | translate }}</mat-label>
+        <input matInput type="number" placeholder="{{ 'MAX_TEAMS_SIZE_PLACEHOLDER' | translate }}" formControlName="maxTeamSize" required>
+      </mat-form-field>
+
+      <!-- Description Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'DESCRIPTION' | translate }}</mat-label>
+        <textarea matInput placeholder="{{ 'DESCRIPTION_PLACEHOLDER' | translate }}" formControlName="description" required></textarea>
+      </mat-form-field>
+
+      <!-- Challenge List Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'CHALLENGE_TITLES' | translate }}</mat-label>
+        <mat-chip-list #chipList>
+          <mat-chip *ngFor="let challenge of this.hackathon.challengeTitles" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(challenge)">
+            {{challenge}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input 
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+                 [matChipInputFor]="chipList"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+      
+     
+
+    </form>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">{{ 'CANCEL' | translate }}</button>
+  <button mat-button type="button" [disabled]="!hackathonForm.valid" (click)="onSubmit()">{{ 'SUBMIT' | translate }}</button>
+</div>

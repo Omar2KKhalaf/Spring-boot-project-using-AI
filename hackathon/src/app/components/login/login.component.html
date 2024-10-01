@@ -1,0 +1,33 @@
+<div class="login-wrapper bg-image" style="width: 100%;">
+  <div class="login-container col-md-6">
+    <div class="login-header d-flex justify-content-between align-items-center">
+      <h1>{{'LOGIN'|translate}}</h1>
+      <button class="btn btn-secondary btn-sm rounded-circle language-switch" 
+          [style.right]="currentLanguage === 'en' ? '20px' : null" 
+          [style.left]="currentLanguage === 'ar' ? '20px' : null" 
+          (click)="switchLanguage()">
+          {{ currentLanguage === 'en' ? 'ع' : 'EN' }}
+          </button>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>{{ 'EMAIL' | translate }}</label>
+        <input type="email" formControlName="email" class="form-control" required>
+        <div *ngIf="loginForm.get('email').hasError('invalidEmail')" class="error-message">
+          {{ loginForm.get('email').getError('invalidEmail') }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{ 'PASSWORD' | translate }}</label>
+        <input type="password" formControlName="password" class="form-control" required>
+        <div *ngIf="loginForm.get('password').hasError('invalidPassword')" class="error-message">
+          {{ loginForm.get('password').getError('invalidPassword') }}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ 'LOGIN' | translate }}</button>
+    </form>
+    <p style="margin-top: 10px;">{{ 'DONOT_HAVE_ACCOUNT' | translate }}
+      <a routerLink="/register">{{ 'REGISTER_NOW' | translate }}</a>
+    </p>
+  </div>
+</div>

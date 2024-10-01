@@ -1,0 +1,38 @@
+/* Style for the dialog container */
+::ng-deep .mat-dialog-container {
+  width: 100%;
+}
+
+/* Style for the dialog title */
+::ng-deep mat-dialog-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px; /* Adds some space between the title and form content */
+}
+
+/* Styling the form container inside the dialog */
+.add_hackathon h1 {
+  display: none; /* Since we already have a dialog title, we might not need this */
+}
+
+/* Ensure full width for form fields and align button */
+::ng-deep .add_hackathon mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Provide spacing between form fields */
+}
+
+/* Actions at the bottom of the dialog */
+::ng-deep mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* Style for action buttons */
+::ng-deep mat-dialog-actions button {
+  margin-right: 10px;
+}
+
+::ng-deep button[mat-raised-button] {
+  margin-top: 20px; /* Add some top margin for button inside form */
+}

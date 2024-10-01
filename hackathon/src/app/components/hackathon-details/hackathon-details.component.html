@@ -1,0 +1,65 @@
+<!-- hackathon-details.component.html -->
+<div class="hackathon-details">
+  <app-header></app-header>
+  <div class="hackathon-details-container">
+    <h2>{{ 'HACKATHON_DETAILS'|translate}}</h2>
+    <div class="hackathon-info">
+      <h3>{{ hackathon.hackathonId }}</h3>
+      <p>
+        <strong>{{ "NAME" | translate }}:</strong> {{ hackathon.name }}
+      </p>
+      <p>
+        <strong>{{ "DESCRIPTION" | translate }}:</strong>
+        {{ hackathon.theme }}
+      </p>
+      <p>
+        <strong>{{ "START_DATE" | translate }}:</strong>
+        {{ hackathon.registrationStartDate }}
+      </p>
+      <p>
+        <strong>{{ "END_DATE" | translate }}:</strong> {{ hackathon.registrationEndDate }}
+      </p>
+    </div>
+    <h4>{{'COMPETITOR_REQUESTS'|translate}}</h4>
+    <table class="competitor-requests">
+      <thead>
+        <tr>
+          <th>{{'TEAM_NAME'|translate}}</th>
+          <th>{{'SELECTED_CHALLENGE'|translate}}</th>
+          <th>{{'TEAM_MEMBERS'|translate}}</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of hackathon.teams">
+          <td>{{ request.teamName }}</td>
+          <td>{{ request.selectedChallenge }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let member of request.competitors">
+                <strong>{{ member.title }}</strong
+                >: {{ member.name }}, {{ member.personalId }}, {{ member.email }},
+                {{ member.mobile }}
+              </li>
+            </ul>
+          </td>
+          <!-- <td>
+            <button
+              class="accept-button"
+              (click)="acceptRequest(request.teamName)"
+            >
+              Accept
+            </button>
+            <button
+              class="decline-button"
+              (click)="declineRequest(request.teamName)"
+            >
+              Decline
+            </button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-footer></app-footer>
+</div>

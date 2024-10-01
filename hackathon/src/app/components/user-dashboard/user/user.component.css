@@ -1,0 +1,60 @@
+/* Set background image for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif; /* Use a standard font for better readability */
+  color: #2c3e50; /* Dark blue text color for better contrast */
+}
+
+.container {
+  width: 100%;
+  background-image: url('src\assets\images\login-background.jpg');
+  padding: 20px;
+}
+
+.mat-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #2c3e50;
+  background-color: rgba(255, 255, 255, 0.9); /* Light white background for better readability */
+}
+
+.mat-table th,
+.mat-table td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.mat-table th {
+  background-color: #2980b9; /* Blue background for table headers */
+  color: #fff; /* White text color for table headers */
+}
+
+.mat-table tr:nth-child(even) {
+  background-color: #ecf0f1; /* Light blue for alternate row background color */
+}
+
+.mat-table tr:hover {
+  background-color: #3498db; /* Light blue on hover for better contrast */
+}
+
+/* Button styling for register link */
+.mat-table a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 4px;
+  border: 1px solid #2980b9;
+  border-radius: 4px;
+  background-color: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.mat-table a:hover {
+  background-color: #b08d57 ; /* Green button color on hover */
+}

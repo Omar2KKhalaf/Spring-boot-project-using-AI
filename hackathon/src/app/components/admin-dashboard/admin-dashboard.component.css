@@ -1,0 +1,94 @@
+/* Style for the admin dashboard */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the dashboard takes up the full height of the viewport */
+}
+
+/* Style for the content section */
+.admin-dashboard__content {
+  flex: 1; /* Allow the content to take up remaining space */
+  padding: 10px;
+  position: relative; /* Set position relative for absolute positioning of the search box */
+  background-image: url('/assets/images/white-bg-with-logo.jpg');
+  /* fit */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Style for the "Add new hackathon" button */
+.admin-dashboard__content button {
+  margin-bottom: auto; /* Push the button to the bottom */
+  display: block; /* Ensure the button takes full width */
+  margin: 0 auto; /* Center the button horizontally */
+  margin-bottom: 50px; /* Push the button to the bottom */
+}
+
+/* Style for the hackathons section */
+.hackathons {
+  position: relative; /* Set position relative for absolute positioning of the search box */
+}
+
+/* Style for the search box */
+.hackathon-search {
+  /*position: absolute;
+  /*top: -15%; /* Adjust top position as needed */
+  /* right: 0; */
+  /*margin: 0 auto; /* Center the search box horizontally */
+}
+
+/* Style for the table */
+.mat-table {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+/* Style for form fields */
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* Responsive styling for table rows and cells */
+.mat-row,
+.mat-header-row {
+  display: flex;
+  margin: auto; /* Center the header row */
+  /* Center the text */
+  height: auto;
+}
+
+/* hover mat row */
+.mat-row:hover {
+  background-color: #f5f5f5; /* Set background color on hover */
+}
+.mat-header-row {
+  background-color: #f5f5f5; /* Set background color for header row */
+  font-weight: bold; /* Set font weight for header row */
+}
+
+.mat-cell,
+.mat-header-cell {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+
+}
+
+.mat-cell button {
+  margin: auto auto; /* Center the button horizontally */
+  margin-left: 10px; /* Add left margin to the button */
+
+}
+
+/* Style for the footer */
+app-footer {
+  margin-top: auto; /* Push the footer to the bottom */
+}
+app-header {
+  position: relative; /* Set position relative for absolute positioning of the search box */
+  max-width: 100%; /* Ensure the header takes up the full width */
+}
+.table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}

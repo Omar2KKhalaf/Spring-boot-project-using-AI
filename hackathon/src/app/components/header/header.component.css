@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  padding: 10px 20px;
+}
+
+.brand-logo a img {
+  height: 60px;
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #04127c;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #b08d57 ;
+}
+
+.language-switch {
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid #04127c;
+  color: #04127c;
+  background-color: transparent;
+}
+
+.btn-logout {
+  background-color: #04127c;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-logout:hover {
+  background-color: #b08d57 ;
+}
+

@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <div class="brand-logo">
+    <a href="/">
+      <img src="assets/images/logo.png" alt="Brand Logo" />
+    </a>
+  </div>
+  <button class="nav-toggle" (click)="toggleNavMenu()">
+    &#9776; 
+  </button>
+  <div class="nav-links-container" [style.display]="isInvisible ? 'none' : 'block'">
+    <ul class="nav-links">
+      <li><a href="/"> {{ "HOME" | translate }}</a></li>
+      <!-- <li *ngIf="isLoggedIn(); else loginLink">
+        <a href="/dashboard">{{ "DASHBOARD" | translate }}</a>
+      </li> -->
+      <ng-template #loginLink>
+        <li><a href="/login">{{ "LOGIN" | translate }}</a></li>
+      </ng-template>
+      <button *ngIf="isLoggedIn()" class="btn btn-secondary btn-sm rounde-circle" (click)="logout()">
+        {{ "LOGOUT" | translate }}
+      </button>
+      <button class="btn btn-secondary btn-sm rounded-circle language-switch" 
+        [style.right]="currentLanguage === 'en' ? '20px' : null" 
+        [style.left]="currentLanguage === 'ar' ? '20px' : null" 
+        (click)="switchLanguage()">
+        {{ currentLanguage === 'en' ? 'ع' : 'EN' }}
+      </button>
+    </ul>
+  </div>
+</nav>

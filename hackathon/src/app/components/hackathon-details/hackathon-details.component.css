@@ -1,0 +1,53 @@
+/* hackathon-details.component.css */
+
+/* Style for the hackathon details page */
+.hackathon-details {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page takes up the full height of the viewport */
+  }
+  
+  /* Style for the container of hackathon details */
+  .hackathon-details-container {
+    padding: 20px;
+    flex: 1; /* Allow the container to take up remaining space */
+  }
+  
+  /* Style for the heading "Hackathon Details" */
+  .hackathon-details-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the hackathon info section */
+  .hackathon-info p {
+    margin: 10px 0;
+  }
+  
+  /* Style for the competitor requests table */
+  .competitor-requests {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .competitor-requests th,
+  .competitor-requests td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .competitor-requests th {
+    background-color: #f0f0f0; /* Light gray background for table header */
+  }
+  
+  /* Style for accept and decline buttons */
+  .accept-button,
+  .decline-button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Additional styles can be added as needed */
+  

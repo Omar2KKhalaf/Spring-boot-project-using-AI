@@ -1,0 +1,42 @@
+.footer {
+    background-color: var(--navy-blue);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+
+  }
+  
+  .footer .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-nav a, .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-links a {
+    font-size: 1.5em; /* Adjust based on icon size */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .social-links {
+      margin-top: 10px;
+    }
+  }

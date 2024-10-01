@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+:root {
+    /* --ghost: #cbd0d9; */
+    --spring-green: #1feb95;
+    --black: #050505;
+    --catalina-blue: #051384;
+    --manatee: #8484a9;
+    --lynch: #63698d;
+    --navy-blue: #04127c;
+    --gun-powder: #44465b;
+    --ship-cove: #7c84c4;
+  }
+  
+  body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--black);
+      background-color: var(--ghost);
+  }
+  
+  .primary-color {
+      background-color: white;
+      color: var(--ghost);
+  }
+  
+  .secondary-color {
+    background-color: var(--navy-blue);
+    color: white;
+  }
+  
+  .accent-color {
+      color: var(--catalina-blue);
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-snack-bar-container{
+    background-color: white;
+    color:black
+}
+.mat-button{
+    background-color: var(--catalina-blue);
+}
+.mat-button-wrapper{
+    color:white;
+}
+/* Add padding to all cells */
+td.mat-cell, th.mat-header-cell {
+    padding: 10px !important;
+}
+.mat-datepicker-toggle-default-icon{
+    color: darkgrey;
+}
